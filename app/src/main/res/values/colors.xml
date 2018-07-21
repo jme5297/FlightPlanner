@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5d6174</color>
+    <color name="colorPrimaryDark">#30323b</color>
+    <color name="colorAccent">#8494a7</color>
+    <color name="colorBright">#e7e9f9</color>
+    <color name="wc_red">#c20000</color>
+    <color name="fc_edit">#bc6d6d</color>
+    <color name="wc_green">#41643f</color>
+    <color name="wc_blue">#0008ff</color>
+    <color name="colorLightGray">#c0c0c0</color>
+</resources>
