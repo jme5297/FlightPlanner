@@ -10,200 +10,204 @@
         android:layout_height="@dimen/flight_card_height">
 
         <LinearLayout
-            android:layout_width="178dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/space2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/flight_card_title"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="@dimen/flight_card_margin"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1.0"
-                android:gravity="start"
-                android:text="Winds Table"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/flight_card_date"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/space2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/flight_card_date"
+                <TextView
+                    android:id="@+id/fc_wt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="@dimen/flight_card_margin"
+                    android:layout_marginLeft="@dimen/flight_card_margin"
+                    android:layout_weight="1.0"
+                    android:gravity="start"
+                    android:text="Winds Table"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/fc_wt_date"
+                    app:layout_constraintEnd_toStartOf="@+id/space2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fc_wt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginLeft="@dimen/flight_card_margin"
+                    android:layout_marginStart="@dimen/flight_card_margin"
+                    android:layout_weight="0.1"
+                    android:gravity="bottom|start"
+                    android:text="TextView"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:layout_marginStart="@dimen/flight_card_margin"
-                android:layout_weight="0.1"
-                android:gravity="bottom|start"
-                android:text="TextView"
-                android:textSize="16sp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/space2"
+                app:layout_constraintTop_toBottomOf="@+id/space2"
+                app:layout_constraintVertical_bias="0.714">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Spd"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/fc_wt_spd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1.0"
+                        app:layout_constraintTop_toBottomOf="@+id/space2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Dir"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/fc_wt_dir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1.0"
+                        app:layout_constraintTop_toBottomOf="@+id/space2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="TAS"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/fc_wt_tas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1.0"
+                        app:layout_constraintTop_toBottomOf="@+id/space2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Var"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/fc_wt_var"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_weight="1.0"
+                        app:layout_constraintTop_toBottomOf="@+id/space2" />
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/space2"
-            app:layout_constraintTop_toBottomOf="@+id/space2"
-            app:layout_constraintVertical_bias="0.714">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="Spd"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/fc_wt_spd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="~"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintHorizontal_weight="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/space2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="Dir"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/fc_wt_dir"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="~"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintHorizontal_weight="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/space2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="TAS"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/fc_wt_tas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="~"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintHorizontal_weight="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/space2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="Var"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/fc_wt_var"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="~"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintHorizontal_weight="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/space2" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <Space
-            android:id="@+id/space2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_delete"
+        android:id="@+id/action_main_delete"
         android:orderInCategory="1"
-        android:title="@string/action_edit_flightcards"
+        android:title="@string/action_main_edit_flightcards"
         android:icon="@drawable/ic_v_delete_white"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_main_settings"
         android:orderInCategory="2"
-        android:title="@string/action_settings"
+        android:title="@string/action_main_settings"
         app:showAsAction="never" />
 
 </menu>

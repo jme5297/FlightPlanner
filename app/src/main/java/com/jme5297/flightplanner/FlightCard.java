@@ -6,8 +6,7 @@ import java.util.Date;
 enum FlightCardType
 {
     WINDCHART,
-    METAR,
-    TAF
+    METARTAF
 }
 
 public class FlightCard {

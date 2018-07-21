@@ -120,11 +120,7 @@ public class WindToolOutputActivity extends AppCompatActivity {
 
                     try {
                         DataController.addFlightCard(getApplicationContext(), fc);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (TransformerException e) {
-                        e.printStackTrace();
-                    } catch (ParserConfigurationException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
